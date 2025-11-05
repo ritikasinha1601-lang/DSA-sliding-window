@@ -1,0 +1,19 @@
+# Find a pair with the given sum exists in a sorted array
+
+def pair_with_a_given_sum(n,k):
+    left = 0
+    right = len(n)-1
+    while left<right:
+        curr_sum = n[left]+n[right]
+        print(left)
+        print(right)
+        if curr_sum == k:
+            return True
+        elif curr_sum < k:
+            left+=1
+        else:
+            right-=1
+nums =  [1, 2, 3, 4, 6, 8, 9]
+k = 9
+result = pair_with_a_given_sum(nums, k)
+print(result)
