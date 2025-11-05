@@ -1,0 +1,15 @@
+def len_of_list(n):
+    if len(n) <3:
+        return "length is less"
+    else:
+        current_sum = sum(n[:3])
+        max_sum = current_sum
+        for i in range(3, len(n)):
+            current_sum = current_sum + n[i] - n[i-3]
+            max_sum = max(max_sum, current_sum)
+        return max_sum
+            
+            
+nums = [2, 5, 1, 8, 3, 9, 4]
+result = len_of_list(nums)
+print(result)
